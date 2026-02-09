@@ -12,6 +12,7 @@ def main(page: ft.Page):
     # Original page setup
     page.title = "Renal Drug Handbook"
     page.theme = theme.get_theme()
+    page.theme_mode = ft.ThemeMode.LIGHT  # Force light mode, ignore system dark mode
     page.bgcolor = theme.BACKGROUND_COLOR
     page.padding = 0 # main_view handles padding mostly
     

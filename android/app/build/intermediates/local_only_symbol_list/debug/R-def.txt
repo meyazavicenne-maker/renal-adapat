@@ -1,0 +1,16 @@
+R_DEF: Internal format may change without notice
+local
+string app_name
+string calculator
+string dose_renal
+string dose_replacement
+string drug_details
+string favorites
+string history
+string home
+string interactions
+string no_results
+string notes
+string search
+string search_drugs
+string warnings

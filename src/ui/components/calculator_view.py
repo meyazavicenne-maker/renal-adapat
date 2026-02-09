@@ -27,7 +27,7 @@ class CalculatorView(ft.Container):
         super().__init__()
         print("DEBUG: CalculatorView RELOADED with COLORS!")
         self.expand = True
-        self.bgcolor = ft.Colors.WHITE
+        self.bgcolor = theme.SURFACE_COLOR  # Use theme color instead of hardcoded white
         self.border_radius = ft.BorderRadius(20, 20, 0, 0)
         
         # State

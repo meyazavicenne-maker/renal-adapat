@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Renal Adapat</string>
+    <string name="home">Accueil</string>
+    <string name="search">Recherche</string>
+    <string name="favorites">Favoris</string>
+    <string name="history">Historique</string>
+    <string name="calculator">Calculateurs</string>
+    <string name="search_drugs">Rechercher un médicament...</string>
+    <string name="no_results">Aucun résultat trouvé</string>
+    <string name="drug_details">Détails du médicament</string>
+    <string name="dose_renal">Dose en insuffisance rénale</string>
+    <string name="dose_replacement">Dose en thérapie de remplacement</string>
+    <string name="warnings">Avertissements</string>
+    <string name="interactions">Interactions</string>
+    <string name="notes">Notes</string>
+</resources>

@@ -42,8 +42,8 @@ def build_dose_table(rows, fallback_text):
     # Header
     display_rows.append(
         ft.Row([
-            ft.Text("Clairance/Mode", weight=ft.FontWeight.BOLD, width=150, color=theme.PRIMARY_COLOR),
-            ft.Text("Dosage", weight=ft.FontWeight.BOLD, expand=True, color=theme.PRIMARY_COLOR),
+            ft.Text("Clairance/Mode", weight=ft.FontWeight.BOLD, size=15, width=150, color=theme.PRIMARY_COLOR),
+            ft.Text("Dosage", weight=ft.FontWeight.BOLD, size=15, expand=True, color=theme.PRIMARY_COLOR),
         ])
     )
     display_rows.append(ft.Divider(height=1, color=ft.Colors.GREY_400))
@@ -52,10 +52,10 @@ def build_dose_table(rows, fallback_text):
         display_rows.append(
             ft.Container(
                 content=ft.Row([
-                    ft.Text(row["category"], weight=ft.FontWeight.W_500, width=150),
-                    ft.Text(row["recommendation"], expand=True, selectable=True), # Allow text to wrap and be selectable
+                    ft.Text(row["category"], weight=ft.FontWeight.W_500, size=14, width=150),
+                    ft.Text(row["recommendation"], size=14, expand=True, selectable=True), # Larger text for readability
                 ], vertical_alignment=ft.CrossAxisAlignment.START),
-                padding=ft.Padding(0, 5, 0, 5) 
+                padding=ft.Padding(0, 8, 0, 8)  # Increased padding for easier tapping
             )
         )
         display_rows.append(ft.Divider(height=0.5, color=ft.Colors.GREY_200))
@@ -166,8 +166,10 @@ def show_details_dialog(page, drug_id, on_close=None):
     # Log to history
     add_to_history(drug_id)
     
-    # Main content container
-    content_container = ft.Container(width=500, height=600)
+    # Main content container - responsive sizing
+    dialog_width = min(600, page.width * 0.95) if page.width else 500  # 95% of screen width, max 600px
+    dialog_height = min(700, page.height * 0.85) if page.height else 600  # 85% of screen height, max 700px
+    content_container = ft.Container(width=dialog_width, height=dialog_height)
     
     # --- State Management ---
     
